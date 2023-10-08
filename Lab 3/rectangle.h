@@ -13,6 +13,8 @@ class Rectangle : public Square{
         double area() const;
         double perimeter() const;
 
+        double get_side_b() const;
+
         void set_side_b(double side_b);
 
         void display() const;

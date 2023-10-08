@@ -4,24 +4,29 @@
 #include <iomanip>
 using namespace std;
 
-Circle:Circle(double x, double y, char* name, double r) : Shape(x, y, name), Radius(r)
+Circle::Circle(double x, double y, char* name, double r) : Shape(x, y, name), radius(r)
 {
 }
 
 double Circle::area() const
 {
-    return 3.14 * Radius * Radius;
+    return 3.14 * radius * radius;
 }
 
 double Circle::perimeter() const
 {
-    return 2 * 3.14 * Radius;
+    return 2 * 3.14 * radius;
+}
+
+double Circle::getRadius() const
+{
+    return radius;
 }
 
 void Circle::display() const
 {
     Shape::display();
-    cout << "Radius: " << Radius << endl;
+    cout << "Radius: " << radius << endl;
     cout << "Area: " << area() << endl;
     cout << "Perimeter: " << perimeter() << endl;
 }

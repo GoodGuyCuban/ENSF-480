@@ -18,6 +18,11 @@ double Rectangle::perimeter() const
     return 2 * (getSideA() + side_b);
 }
 
+double Rectangle::get_side_b() const
+{
+    return side_b;
+}
+
 void Rectangle::set_side_b(double side_b)
 {
     this->side_b = side_b;

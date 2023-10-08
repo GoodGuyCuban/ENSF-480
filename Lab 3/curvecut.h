@@ -1,4 +1,4 @@
-#ifdef CURVECUT_H
+#ifndef CURVECUT_H
 #define CURVECUT_H
 
 #include "circle.h"

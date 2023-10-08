@@ -12,8 +12,10 @@ class Circle : public Shape{
         double area() const;
         double perimeter() const;
 
+        double getRadius() const;
+
         void display() const;
 
-}
+};
 
 #endif
