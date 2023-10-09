@@ -4,9 +4,11 @@
 #include <iomanip>
 using namespace std;
 
-Rectangle::Rectangle(double x, double y, double side_a, double side_b, const char *shapeName) : Square(x, y, side_a, shapeName), side_b(side_b)
+Rectangle::Rectangle(double x, double y, double side_a, double side_b, const char *shapeName) : Square(x, y, side_a, shapeName), Shape(x, y, shapeName)
 {
+    this->side_b = side_b;
 }
+
 
 double Rectangle::area() const
 {

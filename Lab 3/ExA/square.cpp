@@ -4,8 +4,9 @@
 #include <iomanip>
 using namespace std;
 
-Square::Square(double x, double y, double side_a, const char *shapeName ) : Shape(x , y, shapeName), side_a(side_a)
+Square::Square(double x, double y, double side_a, const char *shapeName ) : Shape(x , y, shapeName)
 {
+    this->side_a = side_a;
 }
 
 double Square::area() const

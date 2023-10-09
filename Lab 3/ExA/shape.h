@@ -17,8 +17,10 @@ class Shape{
         const Point& getOrigin() const;
         char* getName() const;
         void display() const;
+        virtual double area() const = 0;
+        virtual double perimeter() const = 0;
 
-        double distance(Shape& other);
+        double distance(const Shape& other);
         static double distance(Shape& the_shape, Shape& other);
 
         void move(double dx, double dy);

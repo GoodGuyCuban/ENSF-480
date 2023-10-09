@@ -3,11 +3,11 @@
 
 #include "shape.h"
 
-class Circle : public Shape{
+class Circle : public virtual Shape{
     private:
         double radius;
     public:
-        Circle(double x, double y, char* name, double r);
+        Circle(double x, double y, double r, char* name);
 
         double area() const;
         double perimeter() const;

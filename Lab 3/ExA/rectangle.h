@@ -4,7 +4,7 @@
 #include "shape.h"
 #include "square.h"
 
-class Rectangle : public Square{
+class Rectangle : public virtual Square{
     private:
         double side_b;
     public:
@@ -14,6 +14,7 @@ class Rectangle : public Square{
         double perimeter() const;
 
         double get_side_b() const;
+
 
         void set_side_b(double side_b);
 

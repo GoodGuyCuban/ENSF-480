@@ -43,7 +43,7 @@ void Shape::display() const{
     cout << "Y-coordinate: " << setprecision(3) << origin.gety() << endl;
 }
 
-double Shape::distance(Shape& other){
+double Shape::distance(const Shape& other){
     return origin.distance(other.origin);
 }
 
