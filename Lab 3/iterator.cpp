@@ -34,6 +34,7 @@ public:
     //           be set to zero. Which means it will be circulated
     //           back to the first element of the vector.
 
+
     int  operator--();
     // PROMISES: decrements the iterator index, and return the
     //           the value of the element at the index. If
@@ -51,6 +52,40 @@ public:
     int operator *();
     // PRIMISES: returns the value of the element at the current 
     //           index position.
+
+    int operator++(){
+      index++;
+      if(index >= v->size)
+        index = 0;
+      return v->array[index];
+    }
+
+    int operator++(int){
+      int tmp = index;
+      index++;
+      if(index >= v->size)
+        index = 0;
+      return v->array[tmp];
+    }
+
+    int operator--(){
+      index--;
+      if(index < 0)
+        index = (v->size-1);
+      return v->array[index];
+    }
+
+    int operator--(int){
+      int tmp = index;
+      index--;
+      if(index < 0)
+        index = (v->size-1);
+      return v->array[tmp];
+    }
+
+    int operator *(){
+      return v->array[index];
+    }
   };
 
   Vector(int sz); 
@@ -63,12 +98,26 @@ public:
   
 	void ascending_sort();
   // PRIMISES: sorts the vector values in ascending order. 
+
 	
 private:
   int *array;               // points to the first element of an array of T
   int size;               // size of array
   void swap(int&, int &); // swaps the values of two elements in array
 public:
+
+  int & operator[](int i){
+    if(i < 0 || i >= size)
+      exit(1);
+    return array[i];
+  }
+  
+  void ascending_sort(){
+    for(int i=0; i< size-1; i++)
+      for(int j=i+1; j < size; j++)
+        if(array[i] > array[j])
+          swap(array[i], array[j]);
+  }
 };
 
 
@@ -138,7 +187,7 @@ int main()
  // the code between the  #if 0 and #endif is ignored by
  // compiler. If you change it to #if 1, it will be compiled
  
-#if 0
+#if 1
 	cout << "\nTesting an <int> Vector: " << endl;
 	
 	cout << "\n\nTesting sort";
