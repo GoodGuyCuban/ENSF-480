@@ -3,19 +3,20 @@
 
 #include "shape.h"
 
-class Circle : public virtual Shape{
-    private:
-        double radius;
-    public:
-        Circle(double x, double y, double r, char* name);
+class Circle : public virtual Shape
+{
+private:
+    double radius;
 
-        double area() const;
-        double perimeter() const;
+public:
+    Circle(double x, double y, double r, char *name);
 
-        double getRadius() const;
+    double area() const;
+    double perimeter() const;
 
-        void display() const;
+    double getRadius() const;
 
+    void display() const;
 };
 
 #endif
