@@ -4,7 +4,7 @@
 #include <iomanip>
 using namespace std;
 
-Circle::Circle(double x, double y, double r, char* name) : Shape(x, y, name), radius(r)
+Circle::Circle(double x, double y, double r, char *name) : Shape(x, y, name), radius(r)
 {
 }
 

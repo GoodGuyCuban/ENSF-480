@@ -5,6 +5,9 @@
 #ifndef MYSTRING_H
 #define MYSTRING_H
 
+#include <iostream>
+#include <ostream>
+
 class Mystring {
  public:
   Mystring();
@@ -28,6 +31,9 @@ class Mystring {
   // REQUIRES: rhs is reference to a Mystring as a source
   // PROMISES: to make this-object (object that this is pointing to, as  a copy 
   //           of rhs.
+
+  //overload operator <<
+  friend std::ostream& operator <<(std::ostream& os, const Mystring& s);
 
   int length() const;
   // PROMISES: Return value is number of chars in charsM.
@@ -59,6 +65,7 @@ class Mystring {
   // PROMISES:copys s into charsM, if the length of s is less than or equal lengthM.
   //          Othrewise, extends the size of the charsM to s.lengthM+1, and copies 
   //          s into the charsM.
+  
 
  private:
 

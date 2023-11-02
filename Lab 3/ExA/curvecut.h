@@ -6,15 +6,15 @@
 
 class CurveCut : public Rectangle, public Circle
 {
-    public:
-        CurveCut(double x, double y, double a, double b, double r, char* name);
+public:
+    CurveCut(double x, double y, double a, double b, double r, char *name);
 
-        double area() const;
-        double perimeter() const; 
+    double area() const;
+    double perimeter() const;
 
-        char* getName() const;
+    char *getName() const;
 
-        void display() const;
+    void display() const;
 };
 
 #endif
